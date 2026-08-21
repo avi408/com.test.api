@@ -1,6 +1,8 @@
 import requests
 import pytest
 from api.config import BASE_URL,MAX_RESPONSE_TIME
+from jsonschema import validate
+from schemas.user_schema import USER_SCHEMA
 from api.test_data import (
     POST_PAYLOAD,
     EMPTY_TITLE_PAYLOAD,
@@ -149,3 +151,70 @@ def test_user_response_schema(api_client):
     assert data["name"] != ""
     assert data["username"] != ""
     assert data["email"] != ""
+
+def test_user_json_schema(api_client):
+    response = api_client.get_user(1)
+
+    assert response.status_code == 200
+
+    data = response.json()
+
+    validate(
+        instance=data,
+        schema=USER_SCHEMA
+    )
+
+def test_get_user_content_type(api_client):
+    response = api_client.get_user(1)
+
+    assert response.status_code == 200
+
+    content_type = response.headers.get("Content-Type")
+
+    assert content_type is not None
+    assert "application/json" in content_type
+
+def test_create_post_with_json_header(api_client):
+    response = api_client.create_post(POST_PAYLOAD)
+
+    assert response.status_code == 201
+    assert response.request.headers["Content-Type"] == "application/json"
+
+def test_get_user_authorization_header(api_client):
+    response = api_client.get_user(
+        1,
+        token="test-token-123"
+    )
+
+    assert response.status_code == 200
+
+    authorization = response.request.headers.get("Authorization")
+
+    assert authorization == "Bearer test-token-123"
+
+def test_get_posts_by_user_id(api_client):
+    response = api_client.get_posts(
+        {"userId": 1}
+    )
+
+    assert response.status_code == 200
+
+    data = response.json()
+
+    assert isinstance(data, list)
+    assert len(data) > 0
+
+    for post in data:
+        assert post["userId"] == 1
+
+def test_get_posts_for_nonexistent_user(api_client):
+    response = api_client.get_posts(
+        {"userId": 999}
+    )
+
+    assert response.status_code == 200
+
+    data = response.json()
+
+    assert isinstance(data, list)
+    assert len(data) == 0
