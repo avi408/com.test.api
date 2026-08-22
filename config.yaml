@@ -1,0 +1,8 @@
+environment: qa
+
+api:
+  base_url: https://jsonplaceholder.typicode.com
+  max_response_time: 1
+
+auth:
+  token: test-token-123

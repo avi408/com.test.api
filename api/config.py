@@ -1,3 +1,10 @@
-BASE_URL = "https://jsonplaceholder.typicode.com"
-MAX_RESPONSE_TIME = 1
-AUTH_TOKEN = "test-token-123"
+import yaml
+
+
+with open("config.yaml", "r") as file:
+    config = yaml.safe_load(file)
+
+
+BASE_URL = config["api"]["base_url"]
+MAX_RESPONSE_TIME = config["api"]["max_response_time"]
+AUTH_TOKEN = config["auth"]["token"]
