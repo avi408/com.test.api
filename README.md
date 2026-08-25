@@ -73,7 +73,7 @@ APITesting/
 
 Installation
 1. Clone the repository
-git clone <your-repository-url>
+git clone https://github.com/avi408/com.test.api
 cd APITesting
 2. Create a virtual environment
 python3 -m venv .venv
