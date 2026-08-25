@@ -70,3 +70,28 @@ APITesting/
 ├── config.yaml
 ├── requirements.txt
 └── README.md
+
+Installation
+1. Clone the repository
+git clone <your-repository-url>
+cd APITesting
+2. Create a virtual environment
+python3 -m venv .venv
+3. Activate the virtual environment
+macOS/Linux:
+source .venv/bin/activate
+Windows:
+.venv\Scripts\activate
+4. Install dependencies
+pip install -r requirements.txt
+Running the Tests
+Run the complete test suite:
+pytest -v
+Run only the post tests:
+pytest -v tests/test_posts.py
+Run only the user tests:
+pytest -v tests/test_users.py
+Run a specific test:
+pytest -v tests/test_posts.py::test_create_post
+Run tests with standard output:
+pytest -v -s
