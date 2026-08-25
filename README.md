@@ -1,5 +1,7 @@
 # REST API Automation Testing Framework
 
+[![API Tests](https://github.com/avi408/com.test.api/actions/workflows/api-tests.yml/badge.svg)](https://github.com/avi408/com.test.api/actions/workflows/api-tests.yml)
+
 A Python-based REST API automation framework built with **Pytest** and **Requests** for validating RESTful APIs.
 
 This project demonstrates API test automation practices including CRUD operations, request/response validation, headers, authorization, query parameters, schema validation, response-time validation, configuration management, and centralized API client design.
