@@ -26,8 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run API tests in parallel with 2 workers
-        run: pytest -v -n 2 --html=report.html --self-contained-html
+      - name: Run API tests in parallel
+        run: pytest -v -n auto --html=report.html --self-contained-html
+
 
       - name: Upload test report
         if: always()
