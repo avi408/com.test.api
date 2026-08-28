@@ -19,14 +19,14 @@ jobs:
       - name: Build Docker image
         run: docker build -t api-testing .
 
+      - name: Create reports directory
+        run: mkdir -p reports
+
       - name: Run API tests in Docker
         run: |
           docker run --rm \
             -v "${{ github.workspace }}/reports:/app/reports" \
-            api-testing \
-            pytest -v -n auto \
-            --html=/app/reports/report.html \
-            --self-contained-html
+            api-testing
 
       - name: Upload test report
         if: always()
