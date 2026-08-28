@@ -16,23 +16,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.14"
+      - name: Build Docker image
+        run: docker build -t api-testing .
 
-      - name: Install dependencies
+      - name: Run API tests in Docker
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run API tests in parallel
-        run: pytest -v -n auto --html=report.html --self-contained-html
-
+          docker run --rm \
+            -v "${{ github.workspace }}/reports:/app/reports" \
+            api-testing \
+            pytest -v -n auto \
+            --html=/app/reports/report.html \
+            --self-contained-html
 
       - name: Upload test report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: api-test-report
-          path: report.html
+          path: reports/report.html
