@@ -1,0 +1,8 @@
+api:
+  base_url: "https://jsonplaceholder.typicode.com"
+  max_response_time: 3
+
+auth:
+  token: "dev-token"
+
+timeout: 10

@@ -143,13 +143,13 @@ def test_get_user_authorization_header(api_client):
     response = api_client.get_user(
         1,
         token=AUTH_TOKEN
-        )
+    )
 
     assert response.status_code == 200
 
     authorization = response.request.headers.get("Authorization")
 
-    assert authorization == "Bearer test-token-123"
+    assert authorization == f"Bearer {AUTH_TOKEN}"
 
 def test_get_posts_by_user_id(api_client):
     response = api_client.get_posts(
