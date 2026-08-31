@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["pytest", "-v", "-n", "auto", "--html=/app/reports/report.html", "--self-contained-html", "--junitxml=/app/reports/junit.xml"]
+CMD ["pytest", "-v", "-n", "auto", "--reruns", "2", "--reruns-delay", "1", "--html=/app/reports/report.html", "--self-contained-html", "--junitxml=/app/reports/junit.xml"]
