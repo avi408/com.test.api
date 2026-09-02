@@ -1770,3 +1770,91 @@
 2026-08-28 13:38:15,123 - api.client - INFO - Payload: {'title': 'PUT Replacement Title', 'body': 'PUT Replacement Body', 'userId': 1}
 2026-08-28 13:38:15,304 - api.client - INFO - Response: 200
 2026-08-28 13:38:15,305 - api.client - INFO - Response time: 0.181s
+2026-08-31 08:42:51,868 - api.client - INFO - POST https://jsonplaceholder.typicode.com/posts
+2026-08-31 08:42:51,868 - api.client - INFO - Payload: {'title': 'QA API Testing', 'body': 'Practicing POST API testing', 'userId': 1}
+2026-08-31 08:42:52,207 - api.client - INFO - Response: 201
+2026-08-31 08:42:52,208 - api.client - INFO - Response time: 0.339s
+2026-08-31 08:42:52,214 - api.client - INFO - POST https://jsonplaceholder.typicode.com/posts
+2026-08-31 08:42:52,214 - api.client - INFO - Payload: {'title': '', 'body': 'Practicing POST API testing', 'userId': 1}
+2026-08-31 08:42:52,538 - api.client - INFO - Response: 201
+2026-08-31 08:42:52,538 - api.client - INFO - Response time: 0.323s
+2026-08-31 08:42:52,543 - api.client - INFO - PUT https://jsonplaceholder.typicode.com/posts/1
+2026-08-31 08:42:52,544 - api.client - INFO - Payload: {'id': 1, 'title': 'Updated QA Test', 'body': 'Updated using PUT', 'userId': 1}
+2026-08-31 08:42:52,848 - api.client - INFO - Response: 200
+2026-08-31 08:42:52,849 - api.client - INFO - Response time: 0.305s
+2026-08-31 08:42:52,852 - api.client - INFO - PATCH https://jsonplaceholder.typicode.com/posts/1
+2026-08-31 08:42:52,853 - api.client - INFO - Payload: {'title': 'PATCH Updated Title'}
+2026-08-31 08:42:53,154 - api.client - INFO - Response: 200
+2026-08-31 08:42:53,154 - api.client - INFO - Response time: 0.301s
+2026-08-31 08:42:53,162 - api.client - INFO - DELETE https://jsonplaceholder.typicode.com/posts/1
+2026-08-31 08:42:53,448 - api.client - INFO - Response: 200
+2026-08-31 08:42:53,448 - api.client - INFO - Response time: 0.285s
+2026-08-31 08:42:53,453 - api.client - INFO - DELETE https://jsonplaceholder.typicode.com/posts/1
+2026-08-31 08:42:53,622 - api.client - INFO - Response: 200
+2026-08-31 08:42:53,622 - api.client - INFO - Response time: 0.168s
+2026-08-31 08:42:53,622 - api.client - INFO - GET https://jsonplaceholder.typicode.com/posts/1
+2026-08-31 08:42:53,656 - api.client - INFO - Response: 200
+2026-08-31 08:42:53,657 - api.client - INFO - Response time: 0.034s
+2026-08-31 08:42:53,864 - api.client - INFO - GET https://jsonplaceholder.typicode.com/users/1
+2026-08-31 08:42:54,014 - api.client - INFO - Response: 200
+2026-08-31 08:42:54,014 - api.client - INFO - Response time: 0.150s
+2026-08-31 08:42:54,016 - api.client - INFO - GET https://jsonplaceholder.typicode.com/users/2
+2026-08-31 08:42:54,105 - api.client - INFO - Response: 200
+2026-08-31 08:42:54,105 - api.client - INFO - Response time: 0.088s
+2026-08-31 08:42:54,106 - api.client - INFO - GET https://jsonplaceholder.typicode.com/users/3
+2026-08-31 08:42:54,242 - api.client - INFO - Response: 200
+2026-08-31 08:42:54,242 - api.client - INFO - Response time: 0.135s
+2026-08-31 08:42:54,245 - api.client - INFO - GET https://jsonplaceholder.typicode.com/users/4
+2026-08-31 08:42:54,425 - api.client - INFO - Response: 200
+2026-08-31 08:42:54,425 - api.client - INFO - Response time: 0.179s
+2026-08-31 08:42:54,429 - api.client - INFO - GET https://jsonplaceholder.typicode.com/users/5
+2026-08-31 08:42:54,562 - api.client - INFO - Response: 200
+2026-08-31 08:42:54,562 - api.client - INFO - Response time: 0.133s
+2026-08-31 08:42:54,565 - api.client - INFO - GET https://jsonplaceholder.typicode.com/users/1
+2026-08-31 08:42:54,875 - api.client - INFO - Response: 200
+2026-08-31 08:42:54,875 - api.client - INFO - Response time: 0.310s
+2026-08-31 08:42:54,881 - api.client - INFO - GET https://jsonplaceholder.typicode.com/users/1
+2026-08-31 08:42:55,196 - api.client - INFO - Response: 200
+2026-08-31 08:42:55,197 - api.client - INFO - Response time: 0.316s
+2026-08-31 08:42:55,201 - api.client - INFO - GET https://jsonplaceholder.typicode.com/users/1
+2026-08-31 08:42:55,304 - api.client - INFO - Response: 200
+2026-08-31 08:42:55,304 - api.client - INFO - Response time: 0.103s
+2026-08-31 08:42:55,309 - api.client - INFO - GET https://jsonplaceholder.typicode.com/users/1
+2026-08-31 08:42:55,413 - api.client - INFO - Response: 200
+2026-08-31 08:42:55,413 - api.client - INFO - Response time: 0.104s
+2026-08-31 08:42:55,415 - api.client - INFO - POST https://jsonplaceholder.typicode.com/posts
+2026-08-31 08:42:55,415 - api.client - INFO - Payload: {'title': 'QA API Testing', 'body': 'Practicing POST API testing', 'userId': 1}
+2026-08-31 08:42:55,695 - api.client - INFO - Response: 201
+2026-08-31 08:42:55,696 - api.client - INFO - Response time: 0.280s
+2026-08-31 08:42:55,701 - api.client - INFO - GET https://jsonplaceholder.typicode.com/users/1
+2026-08-31 08:42:55,800 - api.client - INFO - Response: 200
+2026-08-31 08:42:55,800 - api.client - INFO - Response time: 0.099s
+2026-08-31 08:42:55,803 - api.client - INFO - GET https://jsonplaceholder.typicode.com/posts
+2026-08-31 08:42:55,803 - api.client - INFO - Params: {'userId': 1}
+2026-08-31 08:42:56,090 - api.client - INFO - Response: 200
+2026-08-31 08:42:56,091 - api.client - INFO - Response time: 0.287s
+2026-08-31 08:42:56,096 - api.client - INFO - GET https://jsonplaceholder.typicode.com/posts
+2026-08-31 08:42:56,097 - api.client - INFO - Params: {'userId': 999}
+2026-08-31 08:42:56,222 - api.client - INFO - Response: 200
+2026-08-31 08:42:56,222 - api.client - INFO - Response time: 0.125s
+2026-08-31 08:42:56,225 - api.client - INFO - GET https://jsonplaceholder.typicode.com/users/0
+2026-08-31 08:42:56,351 - api.client - INFO - Response: 404
+2026-08-31 08:42:56,351 - api.client - INFO - Response time: 0.126s
+2026-08-31 08:42:56,354 - api.client - INFO - GET https://jsonplaceholder.typicode.com/users/-1
+2026-08-31 08:42:56,465 - api.client - INFO - Response: 404
+2026-08-31 08:42:56,465 - api.client - INFO - Response time: 0.111s
+2026-08-31 08:42:56,467 - api.client - INFO - GET https://jsonplaceholder.typicode.com/users/9999
+2026-08-31 08:42:56,549 - api.client - INFO - Response: 404
+2026-08-31 08:42:56,549 - api.client - INFO - Response time: 0.082s
+2026-08-31 08:42:56,550 - api.client - INFO - POST https://jsonplaceholder.typicode.com/posts
+2026-08-31 08:42:56,551 - api.client - INFO - Payload: {'title': 'QA API Testing', 'body': 'Practicing POST API testing', 'userId': 1}
+2026-08-31 08:42:56,695 - api.client - INFO - Response: 201
+2026-08-31 08:42:56,695 - api.client - INFO - Response time: 0.144s
+2026-08-31 08:42:56,698 - api.client - INFO - PATCH https://jsonplaceholder.typicode.com/posts/1
+2026-08-31 08:42:56,698 - api.client - INFO - Payload: {'title': 'PATCH Updated Title'}
+2026-08-31 08:42:56,864 - api.client - INFO - Response: 200
+2026-08-31 08:42:56,864 - api.client - INFO - Response time: 0.166s
+2026-08-31 08:42:56,867 - api.client - INFO - PUT https://jsonplaceholder.typicode.com/posts/1
+2026-08-31 08:42:56,867 - api.client - INFO - Payload: {'title': 'PUT Replacement Title', 'body': 'PUT Replacement Body', 'userId': 1}
+2026-08-31 08:42:57,034 - api.client - INFO - Response: 200
+2026-08-31 08:42:57,034 - api.client - INFO - Response time: 0.167s
